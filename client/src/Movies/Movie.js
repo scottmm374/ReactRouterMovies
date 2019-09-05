@@ -6,8 +6,9 @@ const Movie = (props) => {
  
   useEffect(() => {
     const id = 1;
-    // change ^^^ that line and grab the id from the URL
-    // You will NEED to add a dependency array to this effect hook
+      
+    })
+    
 
        axios
         .get(`http://localhost:5000/api/movies/${id}`)
@@ -55,3 +56,6 @@ const Movie = (props) => {
 }
 
 export default Movie;
+
+
+// if(movies !== undefined)
