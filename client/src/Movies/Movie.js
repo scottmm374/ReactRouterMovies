@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Movie = (props) => {
 
-  const [movie, setMovie] = useState(undefined);
+  const [movie, setMovie] = useState();
   //  Fix suggested in Slack set state to undefined 
   // and wrap return below in if statement. 
 
@@ -35,8 +35,7 @@ const Movie = (props) => {
   }
 
   const { title, director, metascore, stars } = movie;
-  // Suggested fix to workaround map issue (If statement)
-  if (movie !== undefined) {
+ 
     return (
       <div className="save-wrapper">
         <div className="movie-card">
@@ -55,10 +54,10 @@ const Movie = (props) => {
             </div>
           ))}
         </div>
-        <div className="save-button">Save</div>
+        <div className="save-button" >Save</div>
       </div>
     );
   }
-}
+
 
 export default Movie;
